@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * is_lower - function that check lower character
- *
+ * _islower - function that check lower character
+ * @c: parameter to be printed
  * Return:To be 1 otherwise 0
  */
 
