@@ -3,15 +3,14 @@
 
 /**
  * _strlen - returns the length of a given string
- *
- *
  * @s: string to check the length of
  * Return: returns the length of the string
  */
+
 int _strlen(char *s)
 {
 	int i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 		i++;
@@ -21,10 +20,10 @@ int _strlen(char *s)
 
 /**
  * rev_string - reverses string in place, without printing it
- *
  * @s: string to reverse
  * Return: void
  */
+
 void rev_string(char *s)
 {
 	int i, len;
