@@ -2,21 +2,21 @@
 #include <stdlib.h>
 
 /**
- * new_dog - function that create new dog
- * @name: dog name
- * @age: dog age
- * @owner: dog owner
- * Return: returns a pointer to a newly created dog structure
+ * new_dog - creates a new dog structure
+ * @name: Dog's name
+ * @age: Dog's age
+ * @owner: Dog's owner
+ * Return: returns a pointer to newly created dog structure
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
-	char *copyname, *copyowner;
+	char *cpyname, *cpyowner;
 	int len_name = 0, len_owner = 0, i;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
+
 	while (name[len_name])
 		len_name++;
 	while (owner[len_owner])
@@ -26,22 +26,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog == NULL)
 		return (NULL);
 
-	copyname = malloc(len_name + 1);
-	if (copyname == NULL)
+	cpyname = malloc(len_name + 1);
+	if (cpyname == NULL)
 		return (NULL);
 	for (i = 0; name[i]; i++)
-		copyname[i] = name[i];
-	copyname[i] = '\0';
+		cpyname[i] = name[i];
+	cpyname[i] = '\0';
 
-	copyowner = malloc(len_owner + 1);
-	if (copyowner == NULL)
+	cpyowner = malloc(len_owner + 1);
+	if (cpyowner == NULL)
 		return (NULL);
 	for (i = 0; owner[i]; i++)
-		copyowner[i] = owner[i];
-	copyowner[i] = '\0';
+		cpyowner[i] = owner[i];
+	cpyowner[i] = '\0';
 
-	new_dog->name = copyname;
+	new_dog->name = cpyname;
 	new_dog->age = age;
-	new_dog->owner = copyowner;
+	new_dog->owner = cpyowner;
 	return (new_dog);
 }
