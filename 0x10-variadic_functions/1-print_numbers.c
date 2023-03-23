@@ -3,25 +3,23 @@
 #include "variadic_functions.h"
 
 /**
- * prints_numbers - A function that prints number followed by a new line
- * @seperator: An input string to be printed between numbers
- * @n: numbers of parameters
+ * print_numbers - A function that print numbers followed by a new line.
+ * @separator: An input string to be printed between numbers.
+ * @n: number of parameters
  * @...: Other parameters
- * Return: All of the parameter
+ * Return: The of all parameters
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
-	unsigned int i;
+	unsigned int i = 0;
 	int nums;
 
 	va_start(ap, n);
-	for (i = 0; i < n; i++)
+	for (; i < n; i++)
 	{
 		nums = va_arg(ap, int);
 		printf("%d", nums);
-
 		if (separator == NULL)
 			continue;
 		if (i < n - 1)
