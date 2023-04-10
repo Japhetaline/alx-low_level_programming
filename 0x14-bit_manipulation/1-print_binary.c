@@ -8,7 +8,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int bear = 0, highest = 41758;
+	unsigned int bear = 0, highest = 32768;
 
 	if (n == 0)
 	{
