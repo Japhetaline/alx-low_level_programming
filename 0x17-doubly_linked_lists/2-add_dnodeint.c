@@ -7,7 +7,7 @@
  * @n: The data to add into new node
  * Return: A pointer to new element, or NULL on failure
  */
-dlistint_t *add_dnodeint(dlist_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_queue = NULL, *condition = NULL;
 
@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint(dlist_t **head, const int n)
 	if (!new_queue)
 	{
 		free(new_queue);
-		return (NULL)
+		return (NULL);
 	}
 
 	new_queue->next = NULL;
@@ -25,7 +25,7 @@ dlistint_t *add_dnodeint(dlist_t **head, const int n)
 	if (!head || !(*head))
 	{
 		*head = new_queue;
-		return (new_node);
+		return (new_queue);
 	}
 	else
 	{
