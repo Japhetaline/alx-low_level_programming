@@ -10,13 +10,13 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint *new_queue = NULL, *condition  =NULL;
+	dlistint_t *new_queue = NULL, *condition  = NULL;
 
 	new_queue = malloc(sizeof(dlistint_t));
 	if (!new_queue)
 	{
 		free(new_queue);
-		return (NULL)
+		return (NULL);
 	}
 	new_queue->next = NULL;
 	new_queue->prev = NULL;
