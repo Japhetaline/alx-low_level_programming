@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * create_hash_table - A function that creates a new hash table.
+ * hash_table_create - A function that creates a new hash table.
  * @size: The size of the hash table.
  * Return: A pointer to the newly allocated hash table in memory.
  */
@@ -16,7 +16,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!hashTable)
 		return (NULL);
 	hashTable->size = size;
-	hashTable->array= malloc(sizeof(hash_node_t *) * size);
+	hashTable->array = malloc(sizeof(hash_node_t *) * size);
 	if (!hashTable->array)
 	{
 		free(hashTable);
